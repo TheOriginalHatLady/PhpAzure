@@ -15,6 +15,18 @@
   <input type="submit" value="Run me now!">
 </form>
 
+<input type="button"  value="Run Script"  onclick="run();"/>
+
+<script>
+function run()
+{
+    document.write("hello");
+    $.get("connect.php",function(data){
+        eval(data);
+     });
+     document.write("be great");
+}
+</script>
 
 <!--<button onclick="connect()">Submit</button>-->
 
