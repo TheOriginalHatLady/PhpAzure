@@ -22,10 +22,10 @@ echo "before";
 try{
 $conn = new PDO("sqlsrv:server = tcp:hatorders.database.windows.net,1433; Database = Orders", "sean", "{shushk!7}");
 echo "we in ";
-$statement = $conn->prepare("INSERT INTO dbo.Details(Id, ProductType, Colors, Description, Size)
+$statement = $conn->prepare("INSERT INTO Details(Id, ProductType, Colors, Description, Size)
     VALUES(?, ?, ?, ?, ?)");
 echo "statement";
-$statement->execute(array('1', 'Hat', 'Gray', 'Super cool', 'medium'));
+$statement->execute(array("1", "Hat", "Gray", "Super cool", "medium"));
 echo " after insert";
 }
 catch (Exception $e) {
