@@ -13,7 +13,7 @@ catch (PDOException $e) {
     echo "died";
 }
 
-
+echO "connection ran";
 // SQL Server Extension Sample Code:
 $connectionInfo = array("UID" => "sean@hatorders", "pwd" => "{shushk!7}", "Database" => "Orders", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:hatorders.database.windows.net,1433";
