@@ -11,7 +11,7 @@ catch (PDOException $e) {
     die(print_r($e));
 }
 
-echo 'after connection'
+
 // SQL Server Extension Sample Code:
 $connectionInfo = array("UID" => "sean@hatorders", "pwd" => "{shushk!7}", "Database" => "Orders", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:hatorders.database.windows.net,1433";
