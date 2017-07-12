@@ -1,6 +1,7 @@
 <?php
 // PHP Data Objects(PDO) Sample Code:
 echo "suod";
+/*
 try {
     $conn = new PDO("sqlsrv:server = tcp:hatorders.database.windows.net,1433; Database = Orders", "sean", "{shushk!7}");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -14,7 +15,7 @@ echo 'after connection'
 $connectionInfo = array("UID" => "sean@hatorders", "pwd" => "{shushk!7}", "Database" => "Orders", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:hatorders.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
-/*
+
 try {
 $statement = $conn->prepare("INSERT INTO Details(Id, ProductType, Colors, Description, Size)
     VALUES(?, ?, ?, ?, ?)");
