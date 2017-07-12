@@ -13,7 +13,7 @@ catch (PDOException $e) {
 
 echo 'after connection'
 // SQL Server Extension Sample Code:
-/*$connectionInfo = array("UID" => "sean@hatorders", "pwd" => "{shushk!7}", "Database" => "Orders", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$connectionInfo = array("UID" => "sean@hatorders", "pwd" => "{shushk!7}", "Database" => "Orders", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:hatorders.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
@@ -26,5 +26,5 @@ $statement->execute(array("1", "Hat", "Gray", "Super cool", "medium"));
 catch{PDOException $e){
 echo "succes";
 echo "chuckle";
-}*/
+}
 ?>/
