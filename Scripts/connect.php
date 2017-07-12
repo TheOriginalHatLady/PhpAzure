@@ -18,7 +18,7 @@ $serverName = "tcp:hatorders.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
 
-$statement = $conn->prepare("INSERT INTO Details(Id, ProductType, Colors, Description, Size)
+$statement = $conn->prepare("INSERT INTO dbo.Details(Id, ProductType, Colors, Description, Size)
     VALUES(?, ?, ?, ?, ?)");
     
 $statement->execute(array("1", "Hat", "Gray", "Super cool", "medium"));
