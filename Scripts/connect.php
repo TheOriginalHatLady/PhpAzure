@@ -14,10 +14,14 @@ echo 'after connection'
 $connectionInfo = array("UID" => "sean@hatorders", "pwd" => "{shushk!7}", "Database" => "Orders", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:hatorders.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
+try {
 $statement = $conn->prepare("INSERT INTO Details(Id, ProductType, Colors, Description, Size)
     VALUES(?, ?, ?, ?, ?)");
     
 $statement->execute(array("1", "Hat", "Gray", "Super cool", "medium"));
+}
+catch{PDOException $e){
 echo "succes";
 echo "chuckle";
-?>
+}
+?>/
