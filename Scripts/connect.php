@@ -18,12 +18,14 @@ echO "connection ran";
 $connectionInfo = array("UID" => "sean@hatorders", "pwd" => "{shushk!7}", "Database" => "Orders", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:hatorders.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
-
+echo "before";
 try{
+echo "we in ";
 $statement = $conn->prepare("INSERT INTO dbo.Details(Id, ProductType, Colors, Description, Size)
     VALUES(?, ?, ?, ?, ?)");
     
 $statement->execute(array("1", "Hat", "Gray", "Super cool", "medium"));
+
 }
 catch (Exception $e) {
     die("Oh noes! There's an error in the query!");
