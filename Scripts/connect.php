@@ -21,7 +21,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 echo "before";
 try{
 echo "we in ";
-$statement = $conn->prepare("INSERT INTO dbo.Details(Id, ProductType, Colors, Description, Size)
+$statement = $conn->prepare("INSERT INTO Details(Id, ProductType, Colors, Description, Size)
     VALUES(?, ?, ?, ?, ?)");
 echo "statement";
 $statement->execute(array("1", "Hat", "Gray", "Super cool", "medium"));
