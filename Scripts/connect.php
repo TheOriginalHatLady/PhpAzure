@@ -1,6 +1,6 @@
 <?php
 // PHP Data Objects(PDO) Sample Code:
-echo "suod";
+echo "swade";
 try {
     $conn = new PDO("sqlsrv:server = tcp:hatorders.database.windows.net,1433; Database = Orders", "sean", "{shushk!7}");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -16,6 +16,7 @@ $serverName = "tcp:hatorders.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 $statement = $conn->prepare("INSERT INTO dbo.Details(Id, ProductType, Colors, Description, Size)
     VALUES(?, ?, ?, ?, ?)");
+echo "dogo";
     
 $statement->execute(array("1", "Hat", "Gray", "Super cool", "medium"));
 echo "succes";
