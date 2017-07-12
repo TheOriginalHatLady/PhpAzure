@@ -19,14 +19,14 @@ $connectionInfo = array("UID" => "sean@hatorders", "pwd" => "{shushk!7}", "Datab
 $serverName = "tcp:hatorders.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
-
+try{
 $statement = $conn->prepare("INSERT INTO dbo.Details(Id, ProductType, Colors, Description, Size)
     VALUES(?, ?, ?, ?, ?)");
     
 $statement->execute(array("1", "Hat", "Gray", "Super cool", "medium"));
-
-
-echo "succes";
-echo "chuckle";
+}
+catch (Exception $e) {
+    die("Oh noes! There's an error in the query!");
+}
 
 ?>/
