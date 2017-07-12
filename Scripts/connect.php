@@ -25,7 +25,7 @@ $statement = $conn->prepare("INSERT INTO dbo.Details(Id, ProductType, Colors, De
     VALUES(?, ?, ?, ?, ?)");
     
 $statement->execute(array("1", "Hat", "Gray", "Super cool", "medium"));
-
+echo " after insert";
 }
 catch (Exception $e) {
     die("Oh noes! There's an error in the query!");
