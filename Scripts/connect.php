@@ -27,7 +27,8 @@ echo "we in ";
 $statement = $conn->prepare("INSERT INTO dbo.Details(Id, ProductType, Colors, Description, Size)
     VALUES(?, ?, ?, ?, ?)");
 echo "statement";
-$statement->execute(array(2, "Hat", "Gray", "Super cool", "medium"));
+//$statement->execute(array(2, "Hat", "Gray", "Super cool", "medium"));
+$statement->execute(array(2, $_POST["type"], $_POST["color"], $_POST["description"], $_POST["size"]));
 echo " after insert";
 }
 catch (Exception $e) {
