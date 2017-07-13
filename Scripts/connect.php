@@ -1,3 +1,5 @@
+<html>
+<body>
 <?php
 // PHP Data Objects(PDO) Sample Code:
 echo "suod";
@@ -33,3 +35,5 @@ catch (Exception $e) {
 }
 
 ?>/
+</body>
+</html>
