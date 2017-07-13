@@ -29,9 +29,9 @@ $statement = $conn->prepare("INSERT INTO dbo.Details(Id, ProductType, Colors, De
 echo "statement";
 
 //$statement->execute(array(2, "Hat", "Gray", "Super cool", "medium"));
-$statement->execute(array(2, (string)$_POST["type"], (string)$_POST["color"], (string)$_POST["description"], (string)$_POST["size"]));
+//$statement->execute(array(2, (string)$_POST["type"], (string)$_POST["color"], (string)$_POST["description"], (string)$_POST["size"]));
 
-$statement->execute(array(2, "Hat", "Gray", "Super cool", "medium"));
+//$statement->execute(array(2, "Hat", "Gray", "Super cool", "medium"));
 echo " after insert";
 //echo gettype($_POST["color"])
 echo "var"
