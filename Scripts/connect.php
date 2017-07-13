@@ -30,6 +30,9 @@ echo "statement";
 //$statement->execute(array(2, "Hat", "Gray", "Super cool", "medium"));
 $statement->execute(array(2, (string)$_POST["type"], (string)$_POST["color"], (string)$_POST["description"], (string)$_POST["size"]));
 echo " after insert";
+echo var_dump($_POST["color"])
+echo "var"
+
 }
 catch (Exception $e) {
     die("Oh noes! There's an error in the query!");
